@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "fdcb26e2-4fdb-4909-a89d-7d7cad3b4bc5",
+		"name": "Card Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24532371"
+	},
+	"item": [
+		{
+			"name": "Update Card",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoid2FuamlyYUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiI0MmUwNzE2Yi02NjVjLTQyMTgtYTExNC1iNTZjY2IyODQxODYiLCJleHAiOjE3MDgxNjY1NzB9.1OYVbRsoxKeH93ZgoMS_SY1C5zo9RSpGLnmavKwC-UVUofz687Cxhnwqi_kMJXTRxAWeIXHNsTzZ4Nv5fKFBEA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CardNo\":1007,\r\n      \"Name\":\"Valentine\",\r\n    \"Description\":\"bantuuuuu\",\r\n    \"Color\":\"Red\",\r\n    \"Status\":\"Done\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:41989/api/cards/UpdateCard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "41989",
+					"path": [
+						"api",
+						"cards",
+						"UpdateCard"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "6",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Card",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoid2FuamlyYUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiI0MmUwNzE2Yi02NjVjLTQyMTgtYTExNC1iNTZjY2IyODQxODYiLCJleHAiOjE3MDgxNzIwMjF9.6Vhx2NNo6IfX47cpyEHiaOxSUO7ZH4G8xirdpvgI7ZfiCz1E2zTmNDcsNgQTcrn-Pjm1fvVlzoc6yFIBohDM8w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\":\"April\",\r\n    \"Description\":\"Card for appreciation\",\r\n    \"Color\":\"white\",\r\n    \"Status\":\"To Do\",\r\n    \"CreatedBy\":\"Sam\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:41989/api/cards/addcards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "41989",
+					"path": [
+						"api",
+						"cards",
+						"addcards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"Email\":\"dave@gmail.com\",\r\n    \"Password\":\"David@1990\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:41989/api/login/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "41989",
+					"path": [
+						"api",
+						"login",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Cards",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibWFydGluQDIwMjIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhOTMxYzg2Ni01YjNkLTRjMjEtOWU4MC01OGQ2Mjg3NzIwYTIiLCJleHAiOjE3MDgxNTU4ODR9.p1Ce-CQTZU541Q9wqakUbaJn48jRbC-48LIcY8Dy5ofhsabPEBD0eQg02g1sjDSscTOn4PPHh6BDfCMaDgGAQA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:41989/api/cards/GetAllcards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "41989",
+					"path": [
+						"api",
+						"cards",
+						"GetAllcards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Card",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoid2FuamlyYUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiI0MmUwNzE2Yi02NjVjLTQyMTgtYTExNC1iNTZjY2IyODQxODYiLCJleHAiOjE3MDgxNjY1NzB9.1OYVbRsoxKeH93ZgoMS_SY1C5zo9RSpGLnmavKwC-UVUofz687Cxhnwqi_kMJXTRxAWeIXHNsTzZ4Nv5fKFBEA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CardNo\":1007,\r\n    \"role\":\"42e0716b-665c-4218-a114-b56ccb284186\",\r\n    \"email\":\"wanjira@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:41989/api/cards/deletcards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "41989",
+					"path": [
+						"api",
+						"cards",
+						"deletcards"
+					],
+					"query": [
+						{
+							"key": "cardno",
+							"value": "1005",
+							"disabled": true
+						},
+						{
+							"key": "role",
+							"value": "42e0716b-665c-4218-a114-b56ccb284186",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "dave@gmail.com",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Card",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoid2FuamlyYUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiI0MmUwNzE2Yi02NjVjLTQyMTgtYTExNC1iNTZjY2IyODQxODYiLCJleHAiOjE3MDgxNjY1NzB9.1OYVbRsoxKeH93ZgoMS_SY1C5zo9RSpGLnmavKwC-UVUofz687Cxhnwqi_kMJXTRxAWeIXHNsTzZ4Nv5fKFBEA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:41989/api/cards/Getcard?cardno=1007&role=42e0716b-665c-4218-a114-b56ccb284186",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "41989",
+					"path": [
+						"api",
+						"cards",
+						"Getcard"
+					],
+					"query": [
+						{
+							"key": "cardno",
+							"value": "1007"
+						},
+						{
+							"key": "role",
+							"value": "42e0716b-665c-4218-a114-b56ccb284186"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchCard",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoid2FuamlyYUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiI0MmUwNzE2Yi02NjVjLTQyMTgtYTExNC1iNTZjY2IyODQxODYiLCJleHAiOjE3MDgxNjY1NzB9.1OYVbRsoxKeH93ZgoMS_SY1C5zo9RSpGLnmavKwC-UVUofz687Cxhnwqi_kMJXTRxAWeIXHNsTzZ4Nv5fKFBEA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    \"role\":\"\",\r\n    \"sort\":\"Name\"\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:41989/api/cards/SearchCards?SearchName=April&SearchType=N",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "41989",
+					"path": [
+						"api",
+						"cards",
+						"SearchCards"
+					],
+					"query": [
+						{
+							"key": "SearchName",
+							"value": "April",
+							"description": "CardName,CardColor,CardStatus,CreatedOn"
+						},
+						{
+							"key": "SearchType",
+							"value": "N",
+							"description": "N-Name,C-Color,S-Status,T-CreatedOn"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
